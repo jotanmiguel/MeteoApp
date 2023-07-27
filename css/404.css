@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  height: 100vh; /* Set the body height to the full viewport height */
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: center; /* Center the container vertically */
+}
+
+.center-msg {
+  padding: 20px;
+}
+
+.message {
+  text-align: center;
+  font-size: 50px;
+}
