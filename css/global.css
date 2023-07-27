@@ -1,0 +1,27 @@
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    background-color:lightblue;
+    color: white;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  font-size: large;
+  grid-template-rows: 50% 30% 20%;
+}
+
+.item:nth-child(1){
+  color: blue;
+}
+
+.item:nth-child(2){
+  color: black;
+}
+
+.item:nth-child(3){
+  font-size: xx-small;
+}
