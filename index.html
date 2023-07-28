@@ -6,18 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="css\global.css">
+    <link rel="stylesheet" href="css\index.css">
 </head>
 <body>
-    <ul>
-        <li>a</li>
-        <li>b</li>
-    </ul>
-    <br>
     <div class="container">
-        <div class="item">adasdasdasdasdasdasdsadasdsa</div>
-        <div class="item">adasdasdasdasdasdasdsadasdsa</div>
-        <div class="item">adasdasdasdasdasdasdsadasdsa</div>
+        <div class="hour">
+            14:30:01
+        </div>
+        <div class="date">
+            12/05/2021
+        </div>
+        <div class="weather">
+            <i class="wi wi-sunset"></i>
+            <div class="weather__temp">
+                25°C
+            </div>
+        </div>
     </div>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus ea labore reiciendis doloribus facilis dicta, blanditiis ratione ipsa esse. Reprehenderit earum hic quibusdam dolore beatae consequuntur aliquid atque saepe.
+    <div id="footer-container"></div>
+    
+    <script>
+        // Fetch the footer content and insert it into the "footer-container" div
+        fetch('pages\\footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
