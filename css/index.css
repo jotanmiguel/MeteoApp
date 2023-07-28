@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align items vertically at the center */
+  align-items: center; /* Align items horizontally at the center */
+  height: 100vh; /* Set the container height to the full viewport height */
+}
+
+.hour, .date, .weather {
+  text-align: center; /* Align text content at the center */
+}
+
+.weather__icon img {
+  display: block; /* To center the image using margin auto */
+  margin: auto;
+}
