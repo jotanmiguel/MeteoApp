@@ -8,3 +8,8 @@ function updateTime() {
             // Update the content of the "time-container" div with the current time
             document.getElementById('time-container').textContent = currentTime;
         }
+
+        updateTime();
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
