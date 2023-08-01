@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\footer.css">
+</head>
+<body>
+    <footer>
+        <p class="footer">&copy; <span id="currentYear"></span> <a id="github" href="https://github.com/jotanmiguel">João Oliveira</a>. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get the current year using JavaScript
+        const currentYear = new Date().getFullYear();
+
+        // Set the current year in the HTML
+        document.getElementById('currentYear').textContent = currentYear;
+    </script>
+</body>
+</html>
