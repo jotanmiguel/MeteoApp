@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+    <div id="map" style="height: 400px;"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+
+    
+    <h1>Geolocation Example</h1>
+    <button id="getLocationBtn">Get My Location</button>
+
+    <script>
+        // Add a click event listener to the button
+        getLocationBtn.addEventListener('click', () => {
+            // Check if the Geolocation API is available in the user's browser
+            if ('geolocation' in navigator) {
+                // Use the Geolocation API to get the user's location
+                navigator.geolocation.getCurrentPosition(
+                    // Success callback
+                    (position) => {
+                        // Get the latitude and longitude from the position object
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+
+                        // Do something with the latitude and longitude (e.g., display it on the page)
+                        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+                    },
+                    // Error callback
+                    (error) => {
+                        // Handle the error (e.g., show an error message)
+                        alert(`Error getting location: ${error.message}`);
+                    }
+                );
+            } else {
+                // If Geolocation API is not available, show an error message
+                alert('Geolocation is not available in this browser.');
+            }
+        });
+    </script>
+</body>
+</html>
