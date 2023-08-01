@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css\index.css">
 </head>
 <body>
+    <div id="navbar-container"></div>
     <div class="page">
         <div class="container">
             <div class="hour" id="time-container">
@@ -38,6 +39,13 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-container').innerHTML = data;
+            });
+
+        // Fetch the navbar content and insert it into the "navbar-container" div
+        fetch('includes\\navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
             });
     </script>
 </body>
