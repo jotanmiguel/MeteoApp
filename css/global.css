@@ -1,9 +1,12 @@
 body{
-    margin-left: 5%;
-    margin-right: 5%;
-    color: black;
-    background-color:lightblue;
-    color: white;
+  background-color:	#c1d8f0;
+  color: white;
+  margin: 0;
+}
+
+.page{
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .container {
