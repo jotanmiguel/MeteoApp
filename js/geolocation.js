@@ -18,10 +18,11 @@ if ('geolocation' in navigator) {
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(myMap);
 
                 // Create a marker with the given coordinates and add it to the map
-                const marker = L.marker([lat, long]).addTo(myMap);
+                let marker = L.marker([lat, long]).addTo(myMap);
 
                 // Optionally, you can add a popup to the marker
                 marker.bindPopup(locationName);
+
             })
             .catch(error => {
                 console.log('Error:', error);
