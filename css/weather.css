@@ -1,0 +1,80 @@
+.weather-container{
+    display: inline-block;
+    color: lightgray;
+    /* -webkit-text-stroke: 1 lightblue; */
+}
+
+.weather-main-box {
+    border-radius: 10px;
+    max-width: 100%;
+    padding: 15px;
+    padding-right: 100px;
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 255, 255, 0.20);
+    background-position-x: 100%;
+}
+
+.forecast-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+}
+
+.forecast-day-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.forecast-day-temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.weather-info-container {
+    display: flex;
+    /* Use Flexbox layout */
+    align-items: center;
+    /* Center items vertically */
+}
+
+.weather-info {
+    display: flex;
+    /* Use Flexbox layout for each item */
+    align-items: center;
+    /* Center items vertically */
+    margin: 0 10px 0 0;
+    /* Add margin between items for spacing */
+}
+
+.weather-info i {
+    margin-right: 5px;
+    /* Add spacing between icon and text */
+}
+
+.weather-forecast-container{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(0, 255, 255, 0.20);;
+}
+
+.forecast-day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}

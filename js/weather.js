@@ -1,18 +1,18 @@
 var key = "fda1c4c770e842d197b140037231204";
 var query = 'Porto Santo';
-function getAndUpdateTemp() {
-    var apiUrl = 'http://api.weatherapi.com/v1/current.json?key=' + key + '&q=' + query + '&aqi=no';
+var weather;
+async function getWeatherInfo() {
+    var apiUrl = 'http://api.weatherapi.com/v1/forecast.json?key=' + key + '&q=' + query + '&days=10&aqi=no';
     fetch(apiUrl)
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
-            var temp_c = data.current.temp_c;
-            var temp_f = data.current.temp_f;
-            var tempElement = document.getElementById('temp-container');
-            tempElement.textContent = temp_c + '°C';
+            weather = data;
+            document.getElementById('temp-container').innerText = weather.current.temp_c + 'ºC';
+            const contentElement = document.getElementById('weather-main-box');
+            contentElement.style.backgroundImage = 'url(' + weather.current.condition.icon + ')';
         })
-        .catch(err => console.log("Error getting the temperature: " + err));
-}
+};
+getWeatherInfo();
+console.log(weather);
 
-getAndUpdateTemp();
-
-setInterval(getAndUpdateTemp, 1000*60*5)
+setInterval(getWeatherInfo, 1000*60*5)
