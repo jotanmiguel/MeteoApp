@@ -8,13 +8,3 @@ body{
   margin-left: 5%;
   margin-right: 5%;
 }
-
-.container {
-  display: grid;
-  grid-template-columns: auto; /* Duas colunas: 1 parte e 3 partes */
-  grid-template-rows: 1fr 1fr 1fr 1fr; /* Três linhas: conteúdo automático, conteúdo ocupando espaço restante e conteúdo automático */
-  grid-gap: 10px; /* Espaçamento entre os elementos */
-  min-height: 100vh; /* Altura mínima da grid */
-  justify-content: center; /* Centraliza o conteúdo */
-  align-items: center; /* Centraliza o conteúdo */
-}

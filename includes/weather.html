@@ -18,8 +18,8 @@
             </div>
             <div class="temperature" id="temp-container"></div>
             <div class="max-min-container">
-                <span class="min-temperature-container">Min. <span class="min-temperature">20ºC</span></span>
-                <span class="max-temperature-container">Max. <span class="max-temperature">27ºC</span></span>
+                <span class="min-temperature-container"><span class="min-temperature" id="weather-min-temp"></span></span>
+                <span class="max-temperature-container"><span class="max-temperature" id="weather-max-temp"></span></span>
             </div>
             <div class="weather-info-container">
                 <div class="weather-info">
@@ -28,11 +28,11 @@
                 </div>
                 <div class="weather-info">
                     <i class="fa-solid fa-wind"></i>
-                    <span class="weather-info-text">10km/h</span>
+                    <span class="weather-info-text"></span>
                 </div>
                 <div class="weather-info">
                     <i class="fa-solid fa-droplet"></i>
-                    <span class="weather-info-text">50%</span>
+                    <span class="weather-info-text" id="weather-info-humidity"></span>
                 </div>
             </div>
         </div>
